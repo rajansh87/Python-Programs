@@ -1,0 +1,15 @@
+from Tkinter import *
+root=Tk()
+Label(root,text='radiobutton').pack()
+Label(root,text='Select : ').pack()
+v1=IntVar()
+r=Radiobutton(root,text='male',variable=v1,value=1)
+r.pack()
+r1=Radiobutton(root,text='female',variable=v1,value=2)
+r1.pack()
+r2=Radiobutton(root,text='other',variable=v1,value=3)
+r2.pack()
+def choice():
+    Label(root,text=v1.get()).pack()
+Button(root,text='choice',command=choice).pack()
+root.mainloop()
